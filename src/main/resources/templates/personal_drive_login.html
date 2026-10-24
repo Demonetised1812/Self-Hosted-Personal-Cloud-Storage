@@ -2,17 +2,34 @@
 <html lang="en">
     <head>
         <title>login / sign up page</title>
-        <link rel="stylesheet" href="css/login.css">
+        <!-- loads browser based tailwind to use its utility classes as installation was not done lcoally -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- this section exists because local installation and setup of tailwind css was not performed so it cant be added to css file  -->
+        <style type="text/tailwindcss">
+            @layer components {
+                .formElements {
+                    @apply border px-3 h-12 w-full rounded-2xl;
+                }
+            }
+        </style>
     </head>
-    <body>
-        <div>
-            <h1>LOGIN</h1><br>
+    <body class="flex min-h-screen items-center justify-center p-4">
+        <main class="w-full max-w-md rounded-xl border p-8 my-5 shadow-2xl">
+            <header class="text-center mb-8 mt-3">LOGIN</header>
+            <form class="flex flex-col items-center gap-4">
 
-            <form>
-                <input id="login_email">
-                <input id="login_password">
-                <button id="login_submit_button">submit</button>
+            <input 
+                class="formElements" 
+                type="email" 
+                placeholder="Please enter your email"/>
+
+            <input 
+                class="formElements" 
+                type="password" 
+                placeholder="Please enter your password"/> 
+
+            <button class="formElements">submit</button>
             </form>
-        </div>
+        </main>
     </body>
 </html>
