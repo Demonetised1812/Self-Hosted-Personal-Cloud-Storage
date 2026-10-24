@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileController {
 
     // calls the upload file method after a post request arrives
-    @PostMapping("/api/files")
+    @PostMapping("/test/files")
     // Takes the uploaded file item and lets java access its contents
     public String uploadFile(@RequestParam ("file") MultipartFile file) {
 

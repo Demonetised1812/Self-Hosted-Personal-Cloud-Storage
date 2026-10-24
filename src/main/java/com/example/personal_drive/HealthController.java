@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HealthController {
 
     // connects the request to a method and runs the method
-    @GetMapping("/api/health")
+    @GetMapping("/test/health")
     public String health() {
         return "Personal Drive is running";
     }
