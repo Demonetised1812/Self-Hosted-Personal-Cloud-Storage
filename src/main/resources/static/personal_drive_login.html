@@ -4,6 +4,7 @@
         <title>login / sign up page</title>
         <!-- loads browser based tailwind to use its utility classes as installation was not done lcoally -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="/js/login.js" defer></script>
         <!-- this section exists because local installation and setup of tailwind css was not performed so it cant be added to css file  -->
         <style type="text/tailwindcss">
             @layer components {
@@ -16,19 +17,27 @@
     <body class="flex min-h-screen items-center justify-center p-4">
         <main class="w-full max-w-md rounded-xl border p-8 my-5 shadow-2xl">
             <header class="text-center mb-8 mt-3">LOGIN</header>
-            <form class="flex flex-col items-center gap-4">
+
+            <form id="loginForm" class="flex flex-col items-center gap-4">
 
             <input 
+                id="email" 
                 class="formElements" 
                 type="email" 
-                placeholder="Please enter your email"/>
+                placeholder="Please enter your email"
+                required/>
 
             <input 
+                id="password" 
                 class="formElements" 
                 type="password" 
-                placeholder="Please enter your password"/> 
+                placeholder="Please enter your password"
+                required/> 
 
-            <button class="formElements">submit</button>
+            <button type="submit" class="formElements">submit</button>
+
+            <p id="message" role="status"></p>
+            
             </form>
         </main>
     </body>
