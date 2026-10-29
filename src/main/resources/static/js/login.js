@@ -26,7 +26,7 @@ form.addEventListener("submit", async function (event) {
         const valid = await response.json();
 
         if (valid) {
-            message.textContent = "Your inputs passed validation.";
+            window.location.href = "/personal_drive_main.html";
         } else {
             message.textContent =
                 "Enter a Gmail address and a nonblank password.";

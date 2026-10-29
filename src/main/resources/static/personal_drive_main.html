@@ -3,7 +3,7 @@
     <head>
         <title>personal drive</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="/js/main.js"></script>
+        <script src="/js/main.js" defer></script>
         <link rel="stylesheet" href="/css/main.css">
         <style type="text/tailwindcss">
             @layer components {
@@ -15,6 +15,7 @@
                 }
             }
         </style>
+        <meta charset="UTF-8">
     </head>
     <body class="min-h-screen p-4">
         <!-- this is to change viewing on different screen sizes -->
@@ -33,6 +34,7 @@
                     <!-- hidden section that shows other option when the main thing is clicked -->
                     <div class="flex flex-col gap-2 mt-3">
                         <button id="uploadButton" type="button" class="buttonStyle">+ Upload Files</button>
+                        <input id="fileInput" type="file" multiple hidden>
                         <button id="newFolderButton" type="button" class="buttonStyle">+ New Folder</button>
                     </div>
                 </details>
@@ -59,6 +61,7 @@
 
             <!-- right sidebar -->
             <div class="flex-1 min-w-0">
+                <!-- for the search bar and the account button -->
                 <header id="" class="flex items-center gap-4 p-6 border-b">
                     <input id="searchBar" type="search" placeholder="search" class="border px-3 h-12 w-full rounded-2xl"></input>
                     <button id="accButton" type="button" class="border rounded-full w-12 h-12 shrink-0">Acc</button>
@@ -85,6 +88,7 @@
                                     <th scope="col" class="tableHeading">File Size</th>
                                 </tr>
                             </thead>
+                            <tbody id="recentFilesBody"></tbody>
                         </table>
                     </div>
                 </div>
