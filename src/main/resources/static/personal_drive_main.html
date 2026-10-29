@@ -22,69 +22,71 @@
 
             <!-- left sidebar -->
             <aside class="flex w-full flex-col gap-6 border-b p-6 md:w-64 md:shrink-0 md:border-r md:border-b-0">
-            <header class="text-center text-xl">Personal Drive</header>
+                <header class="text-center text-xl">Personal Drive</header>
 
-            <details class="button-style cursor-pointer">
-                <!-- main thing user sees first and clicks to add new files -->
-                <summary class="buttonStyle cursor-pointer">
-                + New
-                </summary>
+                <details class="button-style cursor-pointer">
+                    <!-- main thing user sees first and clicks to add new files -->
+                    <summary class="buttonStyle cursor-pointer">
+                    + New
+                    </summary>
 
-                <!-- hidden section that shows other option when the main thing is clicked -->
-                <div class="flex flex-col gap-2 mt-3">
-                    <button id="uploadButton" type="button" class="buttonStyle">+ Upload Files</button>
-                    <button id="newFolderButton" type="button" class="buttonStyle">+ New Folder</button>
+                    <!-- hidden section that shows other option when the main thing is clicked -->
+                    <div class="flex flex-col gap-2 mt-3">
+                        <button id="uploadButton" type="button" class="buttonStyle">+ Upload Files</button>
+                        <button id="newFolderButton" type="button" class="buttonStyle">+ New Folder</button>
+                    </div>
+                </details>
+
+                <!-- displays folders created -->
+                <nav class="flex flex-col gap-2 mt-3">
+                    <h1 class="mb-3">Folders</h1>
+                    <ul id="folderDirectory" class="flex flex-col gap-2"></ul>
+                </nav>
+                
+                <!-- helps push this section to the bottom of the page -->
+                <div class="mt-auto flex flex-col gap-6">
+                    <!-- function buttons -->
+                    <button id="favouriteButton" type="button" class="buttonStyle">Favourited</button>
+                    <button id="trashButton" type="button" class="buttonStyle">Trash</button>
+
+                    <!-- displays the amount of storage available and used -->
+                    <div class="">
+                        <h1 id="storageHeading" class="mb-2">Storage Used</h1>
+                        <p id="storageUsed" class="text-sm">x GB of x Gb</p>
+                    </div>
                 </div>
-            </details>
-
-            <!-- displays folders created -->
-            <nav class="flex flex-col gap-2 mt-3">
-                <h1 class="mb-3">Folders</h1>
-                <ul id="folderDirectory" class="flex flex-col gap-2"></ul>
-            </nav>
-            
-            <div class="mt-auto flex flex-col gap-6">
-                <!-- function buttons -->
-                <button id="favouriteButton" type="button" class="buttonStyle">Favourited</button>
-                <button id="trashButton" type="button" class="buttonStyle">Trash</button>
-
-                <!-- displays the amount of storage available and used -->
-                <div class="">
-                    <h1 id="storageHeading" class="mb-2">Storage Used</h1>
-                    <p id="storageUsed" class="text-sm">x GB of x Gb</p>
-                </div>
-            </div>
             </aside>
 
             <!-- right sidebar -->
             <div class="flex-1 min-w-0">
-            <header id="" class="flex items-center gap-4 p-6 border-b">
-                <input id="searchBar" type="search" placeholder="search" class="border px-3 h-12 w-full rounded-2xl"></input>
-                <button id="accButton" type="button" class="border rounded-full w-12 h-12 shrink-0">Acc</button>
-            </header>
+                <header id="" class="flex items-center gap-4 p-6 border-b">
+                    <input id="searchBar" type="search" placeholder="search" class="border px-3 h-12 w-full rounded-2xl"></input>
+                    <button id="accButton" type="button" class="border rounded-full w-12 h-12 shrink-0">Acc</button>
+                </header>
 
-            <!-- section for the folder icons -->
-            <div class="min-h-64 p-6">
-                <h2 id="filesH2">Folders and Files</h2>
-                <div id="fileGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                
+                <!-- section for the folder icons -->
+                <div class="min-h-64 p-6">
+                    <h2 id="filesH2">Folders and Files</h2>
+                    <div id="fileGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    </div>
                 </div>
-            </div>
 
-            <!-- section for recently added or viewed files -->
-            <div class="mt-8 p-6">
-                <h2 id="recentH2" class="mb-4">Recent Files</h2>
-                <div class="overflow-x-auto">
-                <table class="w-full border-2 whitespace-nowrap">
-                    <thead>
-                    <tr>
-                        <th scope="col" class="tableHeading">Name</th>
-                        <th scope="col" class="tableHeading">Date Created</th>
-                        <th scope="col" class="tableHeading">Location</th>
-                        <th scope="col" class="tableHeading">File Size</th>
-                    </tr>
-                    </thead>
-                </table>
+                <!-- section for recently added or viewed files -->
+                <div class="mt-8 p-6">
+                    <h2 id="recentH2" class="mb-4">Recent Files</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-2 whitespace-nowrap">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="tableHeading">Name</th>
+                                    <th scope="col" class="tableHeading">Date Created</th>
+                                    <th scope="col" class="tableHeading">Location</th>
+                                    <th scope="col" class="tableHeading">File Size</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
